@@ -10,6 +10,10 @@ def test_duree_jours():
     assert duree_jours(date(2026, 3, 1), date(2026, 3, 4)) == 4
 
 
+def test_duree_meme_jour_vaut_1():
+    assert duree_jours(date(2026, 3, 1), date(2026, 3, 1)) == 1
+
+
 def test_sortie_avant_entree_leve_erreur():
     with pytest.raises(ValueError):
         duree_jours(date(2026, 3, 4), date(2026, 3, 1))
