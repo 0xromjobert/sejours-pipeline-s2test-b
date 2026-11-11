@@ -7,7 +7,7 @@ from sejours_pipeline.models import Sejour, duree_jours
 
 
 def test_duree_jours():
-    assert duree_jours(date(2026, 3, 1), date(2026, 3, 4)) == 3
+    assert duree_jours(date(2026, 3, 1), date(2026, 3, 4)) == 4
 
 
 def test_duree_meme_jour_vaut_1():
