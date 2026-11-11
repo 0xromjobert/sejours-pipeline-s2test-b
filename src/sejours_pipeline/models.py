@@ -26,4 +26,4 @@ def duree_jours(entree: date, sortie: date) -> int:
     """Nombre de jours entre l'entrée et la sortie."""
     if sortie < entree:
         raise ValueError(f"sortie {sortie} avant entrée {entree}")
-    return (sortie - entree).days
+    return max((sortie - entree).days, 1)
