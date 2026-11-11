@@ -33,7 +33,7 @@ def main() -> None:
         level=logging.INFO, format="%(levelname)s %(name)s : %(message)s"
     )
     source = CsvSource(os.environ["SEJOURS_CSV"])
-    loader = DuckDBLoader(os.environ.get("SEJOURS_DB", "data/sejours.duckdb"))
+    loader = DuckDBLoader(os.environ.get("SEJOURS_DB", "sejours_dev.duckdb"))
     run(source, loader)
 
 
